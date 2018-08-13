@@ -1,14 +1,33 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      NgaliNtsetsiCam
     </ion-title>
   </ion-navbar>
-</ion-header>
+ </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+ <ion-content padding class="img">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+   
+        <button ion-button color="secondary" (click)="takePhoto()">Camera
+            <ion-icon name="camera"></ion-icon>
+        </button>
+  
+
+  
+        <button ion-button color="secondary" (click)="Gallery()">Gallery
+            <ion-icon name="images"></ion-icon>
+        </button>
+        <button ion-button color="secondary" (tap)="toggle()"><ion-icon name="flash"></ion-icon></button>
+        
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6  *ngFor=" let photo of photos; let id =index">
+          <ion-card class="block">
+            <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+          <img [src]="photo" *ngIf="photo"/>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+ </ion-content>

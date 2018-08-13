@@ -1,3 +1,17 @@
 page-home {
-
+.block{
+    position:relative;
+    .deleteIcon{
+        position: absolute;
+        margin-left:85%;
+        margin-top:5px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+        color:#FFFFFF
+    }
+}
+.img{
+    background-image: url('../../assets/imgs/images.png');
+    background-color: rgba(176, 127, 255, 0.445);
+    background-repeat: no-repeat;
+    background-size: 400px;
+}
 }
